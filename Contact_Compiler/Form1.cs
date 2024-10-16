@@ -10,11 +10,31 @@ using System.Windows.Forms;
 
 namespace Contact_Compiler
 {
-    public partial class Form1 : Form
+    public partial class mainForm : Form
     {
-        public Form1()
+        public mainForm()
         {
             InitializeComponent();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void stateDropDownBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
