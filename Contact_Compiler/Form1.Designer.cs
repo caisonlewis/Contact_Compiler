@@ -42,6 +42,10 @@
             this.lastNameTextBox = new System.Windows.Forms.TextBox();
             this.lastNameLabel = new System.Windows.Forms.Label();
             this.addButton = new System.Windows.Forms.Button();
+            this.phoneNumberLabel = new System.Windows.Forms.Label();
+            this.phoneNumberTextBox = new System.Windows.Forms.TextBox();
+            this.contactListView = new System.Windows.Forms.ListView();
+            this.finishButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // firstNameTextBox
@@ -229,18 +233,61 @@
             // addButton
             // 
             this.addButton.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addButton.Location = new System.Drawing.Point(137, 377);
+            this.addButton.Location = new System.Drawing.Point(314, 375);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(164, 29);
             this.addButton.TabIndex = 14;
             this.addButton.Text = "Add Contact";
             this.addButton.UseVisualStyleBackColor = true;
             // 
+            // phoneNumberLabel
+            // 
+            this.phoneNumberLabel.AutoSize = true;
+            this.phoneNumberLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phoneNumberLabel.Location = new System.Drawing.Point(12, 308);
+            this.phoneNumberLabel.Name = "phoneNumberLabel";
+            this.phoneNumberLabel.Size = new System.Drawing.Size(186, 25);
+            this.phoneNumberLabel.TabIndex = 15;
+            this.phoneNumberLabel.Text = "Phone Number:";
+            // 
+            // phoneNumberTextBox
+            // 
+            this.phoneNumberTextBox.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phoneNumberTextBox.Location = new System.Drawing.Point(204, 308);
+            this.phoneNumberTextBox.MaxLength = 10;
+            this.phoneNumberTextBox.Name = "phoneNumberTextBox";
+            this.phoneNumberTextBox.Size = new System.Drawing.Size(288, 28);
+            this.phoneNumberTextBox.TabIndex = 16;
+            // 
+            // contactListView
+            // 
+            this.contactListView.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contactListView.HideSelection = false;
+            this.contactListView.Location = new System.Drawing.Point(17, 410);
+            this.contactListView.Name = "contactListView";
+            this.contactListView.Size = new System.Drawing.Size(754, 104);
+            this.contactListView.TabIndex = 17;
+            this.contactListView.UseCompatibleStateImageBehavior = false;
+            // 
+            // finishButton
+            // 
+            this.finishButton.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.finishButton.Location = new System.Drawing.Point(624, 520);
+            this.finishButton.Name = "finishButton";
+            this.finishButton.Size = new System.Drawing.Size(164, 29);
+            this.finishButton.TabIndex = 18;
+            this.finishButton.Text = "Finish";
+            this.finishButton.UseVisualStyleBackColor = true;
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 555);
+            this.Controls.Add(this.finishButton);
+            this.Controls.Add(this.contactListView);
+            this.Controls.Add(this.phoneNumberTextBox);
+            this.Controls.Add(this.phoneNumberLabel);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.lastNameLabel);
             this.Controls.Add(this.lastNameTextBox);
@@ -258,6 +305,7 @@
             this.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "mainForm";
             this.Text = "Blizzy\'s Contact Compiler";
+            this.Load += new System.EventHandler(this.mainForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,6 +326,10 @@
         private System.Windows.Forms.TextBox lastNameTextBox;
         private System.Windows.Forms.Label lastNameLabel;
         private System.Windows.Forms.Button addButton;
+        private System.Windows.Forms.Label phoneNumberLabel;
+        private System.Windows.Forms.TextBox phoneNumberTextBox;
+        private System.Windows.Forms.ListView contactListView;
+        private System.Windows.Forms.Button finishButton;
     }
 }
 
